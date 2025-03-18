@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matscan - API Docs</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/prism.css" />
+    <script src="/js/prism.js"></script>
+  </head>
+  <body>
+    <header class="border">
+      <nav>
+        <div class="nav-content">
+          <a href="#" class="badge-dev"
+            ><img src="/img/logo.png" alt="" />matscan</a
+          >
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <section>
+        <h1>Welcome to the Matscan Documentation</h1>
+        <br />
+        <p>
+          The Matscan API provides a simple, and efficient way to search
+          Transaction or Users Details On Matsfi Transactions.
+        </p>
+        <br />
+        <h1>API Endpoints</h1>
+        <ul>
+          <li>
+            /api/transactions/<span class="code">start (int)</span>/<span
+              class="code"
+              >end (int)</span
+            >
+          </li>
+          <li>/api/transactions/<span class="code">txid</span></li>
+          <li>/api/users/<span class="code">username</span></li>
+          <li>
+            /api/users/<span class="code">username</span>/transactions/<span
+              class="code"
+              >start (int)</span
+            >/<span class="code">end (int)</span>
+          </li>
+        </ul>
+        <br />
+        <p>All Requets Method are <span class="code">GET</span></p>
+        <br />
+        <h1>Get Transaction ByOfset</h1>
+        <br />
+        <p>
+          Endpoints: /api/transactions/<span class="code">start (int)</span
+          >/<span class="code">end (int)</span>
+        </p>
+        <br />
+        <div class="card">
+          <pre><code class="language-shell">curl -H "Content-type: application/json" 'https://localhost/api/transactions/0/2'
+
+# Response
+{
+    "status": 200,
+    "data": [
+        {
+            "txid": "673d5c4db34e4dc69a133fcc",
+            "from": "zaapr0x",
+            "to": "system",
+            "value": "1",
+            "timestamp": "1732075973946",
+            "type": "Casino Bet"
+
+        },
+        {
+            "txid": "673d5c4db34e4dc69a133fcc",
+            "from": "zaapr0x",
+            "to": "system",
+            "value": "1",
+            "timestamp": "1732075973946",
+            "type": "Casino Bet"
+
+        },
+    ]
+}
+
+          </code></pre>
+        </div>
+        <h1>Get Transaction By Txid</h1>
+        <br />
+        <p>Endpoints: /api/transactions/<span class="code">txid</span></p>
+        <br />
+        <div class="card">
+          <pre><code class="language-shell">curl -H "Content-type: application/json" 'https://localhost/api/transactions/673d5c4db34e4dc69a133fcc'
+
+# Response
+
+{
+    "status": 200,
+    "data":{
+        "txid": "673d5c4db34e4dc69a133fcc",
+        "from": "zaapr0x",
+        "to": "system",
+        "value": "1",
+        "timestamp": "1732075973946",
+        "type": "Casino Bet"
+
+    }
+}
+
+          </code></pre>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
