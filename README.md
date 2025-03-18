@@ -1,6 +1,6 @@
-# Matsi Transaction Explorer
+# MatsFi Transaction Explorer
 
-Matsi Transaction Explorer is a RESTful API designed for retrieving transaction and user data from the Mezo Discord platform. This API allows users to explore transaction details, search for specific transactions, and filter user transactions by type.
+MatsFi Transaction Explorer is a RESTful API designed for retrieving transaction and user data from the Mezo Discord platform. This API allows users to explore transaction details, search for specific transactions, and filter user transactions by type.
 
 ## Features
 - Retrieve transactions by offset.
